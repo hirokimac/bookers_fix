@@ -1,1 +1,113 @@
-@import 'books';
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+ 
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+ 
+ * {
+     -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+     box-sizing: border-box;
+ }
+ 
+ body {
+     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+     font-size: 14px;
+     line-height: 1.42857143;
+     color: #333333;
+     background-color: #fff;
+     padding-top: 70px;
+     padding-left: 20px;
+ }
+ 
+ header {
+     color: white;
+ }
+ 
+ header .navbar-left span {
+     font-size: 20px;
+     padding-top: 10px;
+ }
+ 
+ .nav {
+     margin-bottom: 0;
+     padding-left: 0;
+     list-style: none;
+ }
+ 
+ h1, .h1, h2, .h2, h3, .h3 {
+     margin-top: 20px;
+     margin-bottom: 10px;
+ }
+ 
+ h1, .h1 {
+     font-size: 36px;
+ }
+ 
+ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+     font-family: inherit;
+     font-weight: 500;
+     line-height: 1.1;
+     color: inherit;
+ }
+ 
+ .error_explanation {
+     color: red;
+ }
+ 
+ #notice {
+     color: green;
+   }
+ 
+ label {
+     display: inline-block;
+     max-width: 100%;
+     margin-bottom: 5px;
+     font-weight: bold;
+ }
+ 
+ .btn-primary {
+     color: #fff;
+     background-color: #337ab7;
+     border-color: #2e6da4;
+ }
+ 
+ .btn {
+     display: inline-block;
+     margin-bottom: 0;
+     font-weight: normal;
+     text-align: center;
+     vertical-align: middle;
+     touch-action: manipulation;
+     cursor: pointer;
+     background-image: none;
+     border: 1px solid transparent;
+     white-space: nowrap;
+     padding: 6px 12px;
+     font-size: 14px;
+     line-height: 1.42857143;
+     border-radius: 4px;
+     -webkit-user-select: none;
+     -moz-user-select: none;
+     -ms-user-select: none;
+     user-select: none;
+ }
+ 
