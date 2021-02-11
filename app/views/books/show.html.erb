@@ -54,6 +54,18 @@
               <td>
                 <%= @books.body %>
               </td>
+              <% if current_user.id == @books.user.id %>
+              <td class="btn-sm btn-success edit_book_44300">
+                <%= link_to edit_book_path(@books) do %>
+                Edit
+                <% end %>
+              </td>
+              <td class="btn-sm btn-success edit_book_44300">
+                <%= link_to book_path(@books), method: :delete, data: { confirm: "本当に削除しますか？"} do %>
+                Destroy
+                <% end %>
+              </td>
+              <% end %>
             </tr>
           </thead>
         </table>
