@@ -6,6 +6,9 @@ class UsersController < ApplicationController
     end
 
     def index
+        @user = User.find(current_user.id)
+        @book = Book.new
+        @users = User.all
     end
 
     def edit
