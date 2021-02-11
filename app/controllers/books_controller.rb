@@ -2,6 +2,7 @@ class BooksController < ApplicationController
   before_action :set_book, only: [:show, :edit, :update, :destroy]
 
   def index
+    @user = User.find(current_user.id)
     @books = Book.all
     @book = Book.new
   end
@@ -14,6 +15,9 @@ class BooksController < ApplicationController
     if @book.save
       redirect_to book_path(@book), notice: "successfully created book!"
     else
+      @book.errors.full_messages
+      @user = User.find(current_user.id)
+      @books = Book.all
       render 'index'
     end
   end
